@@ -4,7 +4,10 @@ using System.Text;
 
 namespace CometX.NETCore.ConsoleApp
 {
-    public class ConsoleApp
+    static class Program
     {
+        static void Main()
+        {
+        }
     }
 }
