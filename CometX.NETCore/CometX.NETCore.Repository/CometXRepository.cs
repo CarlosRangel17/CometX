@@ -1,8 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
-using System.Configuration;
 using System.Linq.Expressions;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 using CometX.NETCore.Repository.Utilities;
 using CometX.NETCore.Repository.Queries;
 using CometX.NETCore.Repository.Extensions;
@@ -17,28 +18,32 @@ namespace CometX.NETCore.Repository
         private static string ConnectionString { get; set; }
         private readonly SqlUtils SqlUtil;
         private static readonly QueryUtils QueryUtil = new QueryUtils();
+        private static IConfigurationBuilder builder = new ConfigurationBuilder();
         #endregion
 
         #region constructor(s)
         public CometXRepository()
         {
-            ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            var config = BuildConfiguration();
+            ConnectionString = config.GetConnectionString("DefaultConnection");
             if (ConnectionString.Contains("metadata")) ConnectionString = ConnectionString.ExtrapolateMetaDataFromConnectionString();
             SqlUtil = new SqlUtils(ConnectionString);
         }
 
         public CometXRepository(string key = "")
         {
+            var config = BuildConfiguration();
             Key = !string.IsNullOrWhiteSpace(key) ? key : "DefaultConnection";
-            ConnectionString = ConfigurationManager.ConnectionStrings[Key].ConnectionString;
+            ConnectionString = config.GetConnectionString(Key);
             if (ConnectionString.Contains("metadata")) ConnectionString = ConnectionString.ExtrapolateMetaDataFromConnectionString();
             SqlUtil = new SqlUtils(ConnectionString);
         }
 
         public CometXRepository(string key = "", string connectionString = "")
         {
+            var config = BuildConfiguration();
             Key = key ?? "DefaultConnection";
-            ConnectionString = connectionString ?? ConfigurationManager.ConnectionStrings[Key].ConnectionString;
+            ConnectionString = connectionString ?? config.GetConnectionString(Key);
             if (ConnectionString.Contains("metadata")) ConnectionString = ConnectionString.ExtrapolateMetaDataFromConnectionString();
             SqlUtil = new SqlUtils(ConnectionString);
         }
@@ -369,6 +374,15 @@ namespace CometX.NETCore.Repository
         #endregion
 
         #region private methods
+        private IConfigurationRoot BuildConfiguration()
+        {
+            builder
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            IConfigurationRoot configuration = builder.Build();
+            return configuration;
+        }
         #endregion
     }
 

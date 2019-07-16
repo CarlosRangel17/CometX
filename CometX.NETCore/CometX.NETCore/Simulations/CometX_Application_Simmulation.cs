@@ -7,36 +7,40 @@ using CometX.NETCore.ConsoleApp.Models.APAAcct;
 
 namespace CometX.NETCore.ConsoleApp.Simulations
 {
-    public static class CometX_Application_Simulation
+    public class CometX_Application_Simulation : CometX_Base_Simulation
     {
-        public static readonly CometXService _cometXManager_Acct = new CometXService("APATables_ACCTEntities");
-        public static readonly CometXService _cometXManager_APALog = new CometXService("APALog");
+        protected CometXService _cometXService_Acct = new CometXService("APATables_ACCTEntities");
+        protected CometXService _cometXService_APALog = new CometXService("APALog");
 
-        public static void Run()
+        public CometX_Application_Simulation(string connectionString = "") : base(connectionString)
+        {
+        }
+
+        public override void Run()
         {
             // Testing out Any 
-            //var result_singleCondition = Any_SingleCondition();
-            //var result_multiCondition = Any_MultiCondition();
+            var result_singleCondition = Any_SingleCondition();
+            var result_multiCondition = Any_MultiCondition();
 
             // Testing out Sorted Table
-            //var result_skipTakeCondition = SortedTable_SkipTakeCondition<APA_ApplicationLog>();
-            //var result_skipTakeWhereCondition = SortedTable_SkipTakeWhereCondition();
+            var result_skipTakeCondition = SortedTable_SkipTakeCondition<APA_ApplicationLog>();
+            var result_skipTakeWhereCondition = SortedTable_SkipTakeWhereCondition();
 
             // Test out INSERT
             var result_insertWithContext = Insert_WithContext();
         }
 
-        public static bool Any_SingleCondition()
+        public bool Any_SingleCondition()
         {
-            return _cometXManager_Acct.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "Carlos");
+            return _cometXService_Acct.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "Carlos");
         }
 
-        public static bool Any_MultiCondition()
+        public bool Any_MultiCondition()
         {
-            return _cometXManager_Acct.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "" && x.LastName == "" && x.IsEntryValidationRequired == true);
+            return _cometXService_Acct.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "" && x.LastName == "" && x.IsEntryValidationRequired == true);
         }
 
-        public static APA_ApplicationLog Insert_WithContext()
+        public APA_ApplicationLog Insert_WithContext()
         {
             var entity = new APA_ApplicationLog
             {
@@ -52,19 +56,19 @@ namespace CometX.NETCore.ConsoleApp.Simulations
                 Filename = "TEST"
             };
 
-            _cometXManager_APALog.InsertWithContext(ref entity);
+            _cometXService_APALog.InsertWithContext(ref entity);
             return entity;
         }
 
-        public static List<T> SortedTable_SkipTakeCondition<T>() where T : new()
+        public List<T> SortedTable_SkipTakeCondition<T>() where T : new()
         {
-            return _cometXManager_APALog.GetSortedTable<T>(SortDirection.Descending, "Id", 0, 10);
+            return _cometXService_APALog.GetSortedTable<T>(SortDirection.Descending, "Id", 0, 10);
         }
 
-        public static List<APA_ApplicationLog> SortedTable_SkipTakeWhereCondition()
+        public List<APA_ApplicationLog> SortedTable_SkipTakeWhereCondition()
         {
             var today = DateTime.Now;
-            return _cometXManager_APALog.GetSortedTable<APA_ApplicationLog>(SortDirection.Descending, "Id", 0, 10, x => x.Date < today);
+            return _cometXService_APALog.GetSortedTable<APA_ApplicationLog>(SortDirection.Descending, "Id", 0, 10, x => x.Date < today);
         }
     }
 }

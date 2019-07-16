@@ -11,6 +11,8 @@
   <ItemGroup>
     <ProjectReference Include="..\CometX.NETCore.Attributes\CometX.NETCore.Attributes.csproj" />
     <PackageReference Include="Microsoft.ApplicationBlocks.Data" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
   </ItemGroup>

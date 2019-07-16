@@ -11,10 +11,11 @@ namespace CometX.ConsoleApp
         {
             try
             {
-                //APA_AttendanceLog_VisitorLog_Simulation.Run();
-                //CometXFun_Simulation.Run();
+                var sim = new CometX_Application_Simulation();
                 //var Simulation = new CometX_DataMigration_Simulation();
-                //Simulation.Run();
+                //var Simulation = new APA_AttendanceLog_VisitorLog_Simulation();
+
+                sim.Run();
             }
             catch (Exception ex)
             {
