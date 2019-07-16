@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CometX.NETCore.Attributes
+namespace CometX.NETCore.Attributes.RelationalDBAttributes
 {
     public class DBColumnAttribute : Attribute
     {

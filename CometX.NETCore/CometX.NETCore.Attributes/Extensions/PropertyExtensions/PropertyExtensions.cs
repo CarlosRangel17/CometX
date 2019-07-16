@@ -1,7 +1,6 @@
 using System.Reflection;
-using CometX.NETCore.Attributes;
 
-namespace CometX.NETCore.Extensions.PropertyAttributes
+namespace CometX.NETCore.Attributes.Extensions.PropertyExtensions
 {
     public static class PropertyExtensions
     {

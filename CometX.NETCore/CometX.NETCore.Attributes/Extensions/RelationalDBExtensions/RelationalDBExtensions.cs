@@ -1,13 +1,17 @@
 using System.Reflection;
-using CometX.NETCore.Attributes;
+using CometX.NETCore.Attributes.RelationalDBAttributes;
 
-namespace CometX.NETCore.Extensions.RelationalDBExtensions
+namespace CometX.NETCore.Attributes.Extensions.RelationalDBExtensions
 {
     public static class RelationalDBExtensions
     {
         public static bool HasAllowIdentityUpdateAttribute(this PropertyInfo propertyInfo) => propertyInfo.GetCustomAttribute<AllowIdentityColumnUpdateAttribute>() != null;
 
         public static bool HasAttributeRestrictions(this PropertyInfo propertyInfo) => propertyInfo.HasPropertyNotMappedAttribute() || (propertyInfo.HasPrimaryKeyAttribute() && !propertyInfo.HasAllowIdentityUpdateAttribute());
+        public static bool HasColumnNotMappedAttribute(this PropertyInfo propertyInfo)
+        {
+            return propertyInfo.GetCustomAttribute<ColumnNotMappedAttribute>() != null;
+        }
 
         public static bool HasDbColumnAttribute(this PropertyInfo propertyInfo) => propertyInfo.GetCustomAttribute<DBColumnAttribute>() != null;
 

@@ -1,16 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CometX.NETCore.ConsoleApp</AssemblyName>
+    <RootNamespace>CometX.NETCore.ConsoleApp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="CometX.NETCore.ConsoleApp.cs" />
+    <Compile Remove="Simulations\CometX_DataMigration_Simulation.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="CometX.NETCore.ConsoleApp.cs" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CometX.NETCore.Attributes\CometX.NETCore.Attributes.csproj" />
+    <ProjectReference Include="..\CometX.NETCore.Service\CometX.NETCore.Service.csproj" />
   </ItemGroup>
 
 </Project>

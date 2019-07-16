@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CometX.NETCore.Entities\CometX.NETCore.Entities.csproj" />
+    <ProjectReference Include="..\CometX.NETCore.Repository\CometX.NETCore.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

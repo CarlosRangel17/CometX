@@ -1,0 +1,57 @@
+﻿using System;
+using System.Globalization;
+using System.Linq.Expressions;
+
+namespace CometX.NETCore.Repository.Extensions
+{
+    public static class SQLStringExtension
+    {
+        public static bool ConvertBitStringToBool(this string genericString)
+        {
+            return genericString.Equals("1");
+        }
+
+        //TODO: Need to test
+        public static string ConvertLambdaToSQLQuery<T>(this Expression<Func<T, bool>> expression)
+        {
+            string body = expression.Body.ToString();
+
+            foreach (var parm in expression.Parameters)
+            {
+                var parmName = parm.Name;
+                var parmTypeName = parm.Type.Name;
+                body = body.Replace(parmName + ".", parmTypeName + ".");
+            }
+
+            return body;
+        }
+
+        public static string ConvertYearDayMonthToMonthDayYear(this string date)
+        {
+            DateTime d;
+            var pass = DateTime.TryParseExact(date, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out d);
+            //DateTime d = DateTime.ParseExact(date, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            return pass ? d.ToString("MM/dd/yyyy") : date;
+        }
+
+        public static string ParseToSQLSyntax(this string genericString)
+        {
+            return genericString.Replace("&&", "AND").Replace("||", "OR").Replace("!=", "<>");
+        }
+
+        public static string TrimEndAllSpaceAndCommas(this string genericString)
+        {
+            return genericString.TrimEnd(' ').TrimEnd(',');
+        }
+
+        public static string TrimEndAllSpaceWithAndPersands(this string genericString)
+        {
+            return genericString.TrimEnd(' ').TrimEnd('&');
+        }
+
+        public static string TrimEndAllSpaceWithDoubleAndPersands(this string genericString)
+        {
+            return genericString.TrimEnd(' ').TrimEnd('&').Trim('&');
+        }
+    }
+}
