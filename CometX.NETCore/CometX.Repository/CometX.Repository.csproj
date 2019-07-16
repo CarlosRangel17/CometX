@@ -61,13 +61,13 @@
     <Compile Include="Utilities\SqlUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CometX.Attributes\CometX.Attributes.csproj">
       <Project>{59c279e2-facc-41ad-a10a-5c2db38f8a40}</Project>
       <Name>CometX.Attributes</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
