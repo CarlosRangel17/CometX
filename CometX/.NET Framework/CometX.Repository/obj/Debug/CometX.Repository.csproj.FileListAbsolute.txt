@@ -1,0 +1,19 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\bin\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\bin\Debug\CometX.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\obj\Debug\CometX.Repository.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\obj\Debug\CometX.Repository.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\obj\Debug\CometX.Repository.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\obj\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Repository\obj\Debug\CometX.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\bin\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\bin\Debug\CometX.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\obj\Debug\CometX.Repository.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\obj\Debug\CometX.Repository.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\obj\Debug\CometX.Repository.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\obj\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Repository\obj\Debug\CometX.Repository.pdb

@@ -1,0 +1,28 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Service.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\bin\Debug\CometX.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\obj\Debug\CometX.Service.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\obj\Debug\CometX.Service.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\obj\Debug\CometX.Service.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\obj\Debug\CometX.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Service\obj\Debug\CometX.Service.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Service.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\bin\Debug\CometX.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\obj\Debug\CometX.Service.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\obj\Debug\CometX.Service.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\obj\Debug\CometX.Service.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\obj\Debug\CometX.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Service\obj\Debug\CometX.Service.pdb

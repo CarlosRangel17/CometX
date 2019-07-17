@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CometX.NETCore</id>
+    <version>1.0.0</version>
+    <authors>Carlos Rangel</authors>
+    <owners>Carlos Rangel</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CometX.NET Core Attributes, Entities, Service and Repo .dlls</description>
+    <releaseNotes>Initial release of this package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>CometX.NETCore .NETCore .Net Core Microsoft.ApplicationBlocks.Data ApplicationBlocks</tags>
+    <dependencies>
+      <dependency id="Microsoft.ApplicationBlocks.Data" version="2.0" />
+      <dependency id="Microsoft.Extensions.Configuration" version="2.2.0" />
+      <dependency id="Microsoft.Extensions.Configuration.Json" version="2.2.0" />
+      <dependency id="System.Configuration.ConfigurationManager" version="4.5.0" />
+      <dependency id="System.Data.SqlClient" version="4.6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src=".NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll" target="lib\CometX.NETCore.Attributes.dll" />
+  	<file src=".NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.dll" target="lib\CometX.NETCore.Entities.dll" />
+  	<file src=".NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.dll" target="lib\CometX.NETCore.Service.dll" />
+  	<file src=".NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.dll" target="lib\CometX.NETCore.Repository.dll" />
+  </files>
+</package>

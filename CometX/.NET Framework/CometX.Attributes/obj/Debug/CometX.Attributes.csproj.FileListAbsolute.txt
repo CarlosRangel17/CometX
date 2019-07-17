@@ -1,0 +1,5 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Attributes\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Attributes\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Attributes\obj\Debug\CometX.Attributes.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Attributes\obj\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Attributes\obj\Debug\CometX.Attributes.pdb

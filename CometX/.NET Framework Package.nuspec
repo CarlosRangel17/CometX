@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CometX</id>
+    <version>1.0.0</version>
+    <authors>Carlos Rangel</authors>
+    <owners>Carlos Rangel</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CometX Attributes, Entities, Service and Repo .dlls</description>
+    <releaseNotes>Initial release of this package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>CometX Microsoft.ApplicationBlocks.Data ApplicationBlocks</tags>
+    <dependencies>
+      <dependency id="Microsoft.ApplicationBlocks.Data" version="2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src=".NET Framework\CometX.ConsoleApp\bin\Debug\CometX.Attributes.dll" target="lib\CometX.Attributes.dll" />
+  	<file src=".NET Framework\CometX.ConsoleApp\bin\Debug\CometX.Entities.dll" target="lib\CometX.Entities.dll" />
+  	<file src=".NET Framework\CometX.ConsoleApp\bin\Debug\CometX.Service.dll" target="lib\CometX.Service.dll" />
+  	<file src=".NET Framework\CometX.ConsoleApp\bin\Debug\CometX.Repository.dll" target="lib\CometX.Repository.dll" />
+  </files>
+</package>

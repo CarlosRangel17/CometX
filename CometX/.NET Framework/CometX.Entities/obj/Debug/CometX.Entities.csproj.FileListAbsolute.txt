@@ -1,0 +1,18 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\bin\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\bin\Debug\CometX.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\obj\Debug\CometX.Entities.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\obj\Debug\CometX.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\obj\Debug\CometX.Entities.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\obj\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.Entities\obj\Debug\CometX.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\bin\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\bin\Debug\CometX.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\bin\Debug\CometX.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\obj\Debug\CometX.Entities.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\obj\Debug\CometX.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\obj\Debug\CometX.Entities.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\obj\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.Entities\obj\Debug\CometX.Entities.pdb

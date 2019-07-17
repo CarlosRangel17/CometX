@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Repository\\CometX.NETCore.Repository.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Attributes\\CometX.NETCore.Attributes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Attributes\\CometX.NETCore.Attributes.csproj",
+        "projectName": "CometX.NETCore.Attributes",
+        "projectPath": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Attributes\\CometX.NETCore.Attributes.csproj",
+        "packagesPath": "C:\\Users\\crangel\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Attributes\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\crangel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\ITWS50\\ExpenseClaims_SubmittedImages\\packages": {},
+          "\\\\ITWS50\\ExpenseClaims_SubmittedImages\\packages\\CometX\\.NET Core": {},
+          "\\\\ITWS50\\ExpenseClaims_SubmittedImages\\packages\\CometX\\.NET Framework": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Repository\\CometX.NETCore.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Repository\\CometX.NETCore.Repository.csproj",
+        "projectName": "CometX.NETCore.Repository",
+        "projectPath": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Repository\\CometX.NETCore.Repository.csproj",
+        "packagesPath": "C:\\Users\\crangel\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\crangel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\ITWS50\\ExpenseClaims_SubmittedImages\\packages": {},
+          "\\\\ITWS50\\ExpenseClaims_SubmittedImages\\packages\\CometX\\.NET Core": {},
+          "\\\\ITWS50\\ExpenseClaims_SubmittedImages\\packages\\CometX\\.NET Framework": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Attributes\\CometX.NETCore.Attributes.csproj": {
+                "projectPath": "C:\\Projects\\CometX\\CometX\\.NET Core\\CometX.NETCore.Attributes\\CometX.NETCore.Attributes.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.ApplicationBlocks.Data": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

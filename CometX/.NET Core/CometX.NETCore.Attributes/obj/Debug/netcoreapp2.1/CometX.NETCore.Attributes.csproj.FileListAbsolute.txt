@@ -1,0 +1,26 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.deps.json
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.AssemblyInfoInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.AssemblyInfo.cs
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.deps.json
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.AssemblyInfoInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.AssemblyInfo.cs
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.deps.json
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.csprojAssemblyReference.cache
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.csproj.CoreCompileInputs.cache
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.AssemblyInfoInputs.cache
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.AssemblyInfo.cs
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.Attributes\obj\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb

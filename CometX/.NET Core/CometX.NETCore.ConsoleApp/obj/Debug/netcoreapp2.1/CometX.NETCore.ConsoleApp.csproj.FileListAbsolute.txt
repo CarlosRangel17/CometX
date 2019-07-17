@@ -1,0 +1,67 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.deps.json
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.runtimeconfig.json
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.runtimeconfig.dev.json
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\System.Data.Entity.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\bin\Debug\netcoreapp2.1\System.Data.Entity.xml
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.AssemblyInfoInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.AssemblyInfo.cs
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\CometX.NETCore\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.deps.json
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.runtimeconfig.json
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.runtimeconfig.dev.json
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\System.Data.Entity.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\System.Data.Entity.xml
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.AssemblyInfoInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.AssemblyInfo.cs
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.deps.json
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.runtimeconfig.json
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.runtimeconfig.dev.json
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\System.Data.Entity.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Attributes.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Service.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Entities.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\CometX.NETCore.Repository.pdb
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\bin\Debug\netcoreapp2.1\System.Data.Entity.xml
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csprojAssemblyReference.cache
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.AssemblyInfoInputs.cache
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.AssemblyInfo.cs
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.csproj.CopyComplete
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.dll
+C:\Projects\CometX\CometX\.NET Core\CometX.NETCore.ConsoleApp\obj\Debug\netcoreapp2.1\CometX.NETCore.ConsoleApp.pdb

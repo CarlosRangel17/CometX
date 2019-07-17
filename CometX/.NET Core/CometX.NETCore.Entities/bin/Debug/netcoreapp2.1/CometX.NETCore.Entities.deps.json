@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "CometX.NETCore.Entities/1.0.0": {
+        "dependencies": {
+          "CometX.NETCore.Attributes": "1.0.0"
+        },
+        "runtime": {
+          "CometX.NETCore.Entities.dll": {}
+        }
+      },
+      "CometX.NETCore.Attributes/1.0.0": {
+        "runtime": {
+          "CometX.NETCore.Attributes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CometX.NETCore.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CometX.NETCore.Attributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

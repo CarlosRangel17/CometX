@@ -1,0 +1,13 @@
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.NugetPackage.ConsoleApp.exe.config
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.NugetPackage.ConsoleApp.exe
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.NugetPackage.ConsoleApp.pdb
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.Attributes.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.Entities.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.Repository.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\CometX.Service.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\obj\Debug\CometX.NugetPackage.ConsoleApp.csprojAssemblyReference.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\obj\Debug\CometX.NugetPackage.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\obj\Debug\CometX.NugetPackage.ConsoleApp.csproj.CopyComplete
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\obj\Debug\CometX.NugetPackage.ConsoleApp.exe
+C:\Projects\CometX.NETCore\CometX.NETCore\.NET Framework\CometX.NugetPackage.ConsoleApp\obj\Debug\CometX.NugetPackage.ConsoleApp.pdb
