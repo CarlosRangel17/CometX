@@ -1,16 +1,15 @@
 ﻿using System;
+using CometX.NETCore.Service;
 using System.Collections.Generic;
-using CometX.Service;
-using CometX.Entities.TableEntity;
-using CometX.ConsoleApp.Models.APAAcct;
-using CometX.ConsoleApp.Models.APALog;
+using CometX.NETCore.Entities.TableEntity;
+using CometX.NETCore.ConsoleApp.Models.Generic;
 
-namespace CometX.ConsoleApp.Simulations
+namespace CometX.NETCore.ConsoleApp.Simulations
 {
     public class CometX_Application_Simulation : CometX_Base_Simulation
     {
-        protected CometXService _cometXService_Acct = new CometXService("APATables_ACCTEntities");
-        protected CometXService _cometXService_APALog = new CometXService("APALog");
+        protected CometXService _service1 = new CometXService("DefaultConnection");
+        protected CometXService _service2 = new CometXService("DefaultConnection");
 
         public CometX_Application_Simulation(string connectionString = "") : base(connectionString)
         {
@@ -23,7 +22,7 @@ namespace CometX.ConsoleApp.Simulations
             var result_multiCondition = Any_MultiCondition();
 
             // Testing out Sorted Table
-            var result_skipTakeCondition = SortedTable_SkipTakeCondition<APA_ApplicationLog>();
+            var result_skipTakeCondition = SortedTable_SkipTakeCondition<ApplicationLog>();
             var result_skipTakeWhereCondition = SortedTable_SkipTakeWhereCondition();
 
             // Test out INSERT
@@ -32,17 +31,17 @@ namespace CometX.ConsoleApp.Simulations
 
         public bool Any_SingleCondition()
         {
-            return _cometXService_Acct.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "Carlos");
+            return _service1.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "Carlos");
         }
 
         public bool Any_MultiCondition()
         {
-            return _cometXService_Acct.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "" && x.LastName == "" && x.IsEntryValidationRequired == true);
+            return _service1.Any<UserSetting>(x => x.Username == "A04744" && x.FirstName == "" && x.LastName == "" && x.IsEntryValidationRequired == true);
         }
 
-        public APA_ApplicationLog Insert_WithContext()
+        public ApplicationLog Insert_WithContext()
         {
-            var entity = new APA_ApplicationLog
+            var entity = new ApplicationLog
             {
                 Date = DateTime.Now,
                 Thread = "TEST",
@@ -56,19 +55,19 @@ namespace CometX.ConsoleApp.Simulations
                 Filename = "TEST"
             };
 
-            _cometXService_APALog.InsertWithContext(ref entity);
+            _service2.InsertWithContext(ref entity);
             return entity;
         }
 
         public List<T> SortedTable_SkipTakeCondition<T>() where T : new()
         {
-            return _cometXService_APALog.GetSortedTable<T>(SortDirection.Descending, "Id", 0, 10);
+            return _service2.GetSortedTable<T>(SortDirection.Descending, "Id", 0, 10);
         }
 
-        public List<APA_ApplicationLog> SortedTable_SkipTakeWhereCondition() 
+        public List<ApplicationLog> SortedTable_SkipTakeWhereCondition()
         {
             var today = DateTime.Now;
-            return _cometXService_APALog.GetSortedTable<APA_ApplicationLog>(SortDirection.Descending, "Id", 0, 10, x => x.Date < today);
+            return _service2.GetSortedTable<ApplicationLog>(SortDirection.Descending, "Id", 0, 10, x => x.Date < today);
         }
     }
 }

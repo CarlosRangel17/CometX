@@ -1,7 +1,7 @@
 ﻿using System;
-using CometX.NETCore.Attributes.RelationalDBAttributes;
+using CometX.Attributes.RelationalDBAttributes;
 
-namespace CometX.NETCore.ConsoleApp.Models.APAAcct
+namespace CometX.ConsoleApp.Models.Generic
 {
     public class UserSetting
     {

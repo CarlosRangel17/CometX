@@ -1,9 +1,9 @@
 ﻿using System;
-using CometX.NETCore.Attributes.RelationalDBAttributes;
+using CometX.Attributes.RelationalDBAttributes;
 
-namespace CometX.NETCore.ConsoleApp.Models.APALog
+namespace CometX.ConsoleApp.Models.Generic
 {
-    public class APA_ApplicationLog
+    public class ApplicationLog
     {
         [PrimaryKey]
         public int Id { get; set; }
@@ -21,7 +21,7 @@ namespace CometX.NETCore.ConsoleApp.Models.APALog
         [PropertyNotMapped]
         public string DateString { get; set; }
 
-        public APA_ApplicationLog()
+        public ApplicationLog()
         {
 
         }

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.IO;
 using CometX.NETCore.ConsoleApp.Simulations;
-using Microsoft.Extensions.Configuration;
 
 namespace CometX.NETCore.ConsoleApp
 {
@@ -15,7 +13,6 @@ namespace CometX.NETCore.ConsoleApp
             {
                 var sim = new CometX_Application_Simulation();
                 //var Simulation = new CometX_DataMigration_Simulation();
-                //var Simulation = new APA_AttendanceLog_VisitorLog_Simulation();
 
                 sim.Run();
             }
