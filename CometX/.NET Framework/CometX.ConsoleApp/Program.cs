@@ -11,7 +11,8 @@ namespace CometX.ConsoleApp
         {
             try
             {
-                var sim = new CometX_Service_Simulation();
+                var sim = new CometX_Auth_Simulation();
+                //var sim = new CometX_Service_Simulation();
                 //var Simulation = new CometX_DataMigration_Simulation();
 
                 sim.Run();

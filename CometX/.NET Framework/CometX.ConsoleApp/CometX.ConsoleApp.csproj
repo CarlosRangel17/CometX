@@ -43,13 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\APAAcct\UserSetting.cs" />
-    <Compile Include="Models\APALog\APA_ApplicationLog.cs" />
-    <Compile Include="Models\APAServices\APA_AttendanceLog_VisitorLog.cs" />
+    <Compile Include="Models\Authentication\Token.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Simulations\APA_AttendanceLog_VisitorLog_Simulation.cs" />
-    <Compile Include="Simulations\CometX_Application_Simulation.cs" />
+    <Compile Include="Simulations\CometX_Auth_Simulation.cs" />
     <Compile Include="Simulations\CometX_Base_Simulation.cs" />
   </ItemGroup>
   <ItemGroup>
