@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using CometX.Entities.TableEntity;
 using CometX.Repository.Extensions;
 using CometX.Attributes.Extensions.PropertyExtensions;
 using CometX.Attributes.Extensions.RelationalDBExtensions;
+using CometX.Entities.GenericEntity;
 
 namespace CometX.Service
 {
@@ -50,7 +52,7 @@ namespace CometX.Service
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
-        public void DeleteAll<T>(Expression<Func<T, bool>> expression)
+        public void DeleteAll<T>(Expression<Func<T, bool>> expression = null)
         {
             _repo.Delete(expression, true);
         }
@@ -188,6 +190,68 @@ namespace CometX.Service
         public void MarkActiveByKey<T>(object key) where T : new()
         {
             _repo.Update(MarkPropertyActive(_repo.GetByKey<T>(key)));
+        }
+
+        /// <summary>
+        /// Run a stored procedure and pass a Lexicon of parameter
+        /// </summary>
+        /// <param name="storedProcedure"></param>
+        /// <param name="parameters"></param>
+        public void RunProcedure(string storedProcedure, Lexicon param = null)
+        {
+            var dictParams = new Dictionary<string, string>();
+
+            if (param != null) dictParams.Add(param.Key, param.Value);
+
+            _repo.ExecuteSQL(CommandType.StoredProcedure, storedProcedure, dictParams);
+        }
+
+        /// <summary>
+        /// Run a stored procedure and pass a List<Lexicon> of parameters 
+        /// </summary>
+        /// <param name="storedProcedure"></param>
+        /// <param name="parameters"></param>
+        public void RunProcedure(string storedProcedure, List<Lexicon> parameters)
+        {
+            var dictParams = new Dictionary<string, string>();
+
+            foreach (var param in parameters ?? new List<Lexicon>())
+            {
+                dictParams.Add(param.Key, param.Value);
+            }
+
+            _repo.ExecuteSQL(CommandType.StoredProcedure, storedProcedure, dictParams);
+        }
+
+        /// <summary>
+        /// Run a stored procedure check and pass a Lexicon of parameter
+        /// </summary>
+        /// <param name="storedProcedure"></param>
+        /// <param name="parameters"></param>
+        public bool RunProcedureCheck(string storedProcedure, Lexicon param = null)
+        {
+            var dictParams = new Dictionary<string, string>();
+
+            if (param != null) dictParams.Add(param.Key, param.Value);
+
+            return _repo.ExecuteSQLCheck(CommandType.StoredProcedure, storedProcedure, dictParams);
+        }
+
+        /// <summary>
+        /// Run a stored procedure check and pass a List<Lexicon> of parameters 
+        /// </summary>
+        /// <param name="storedProcedure"></param>
+        /// <param name="parameters"></param>
+        public bool RunProcedureCheck(string storedProcedure, List<Lexicon> parameters)
+        {
+            var dictParams = new Dictionary<string, string>();
+
+            foreach (var param in parameters ?? new List<Lexicon>())
+            {
+                dictParams.Add(param.Key, param.Value);
+            }
+
+            return _repo.ExecuteSQLCheck(CommandType.StoredProcedure, storedProcedure, dictParams);
         }
 
         /// <summary>

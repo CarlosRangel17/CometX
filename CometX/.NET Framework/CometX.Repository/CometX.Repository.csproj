@@ -53,6 +53,7 @@
     <Compile Include="ICometXRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\BaseQuery.cs" />
+    <Compile Include="BaseRepository.cs" />
     <Compile Include="Utilities\EvaluatorUtil.cs" />
     <Compile Include="Utilities\MappingUtils.cs" />
     <Compile Include="Utilities\QueryEvaluatorUtils.cs" />

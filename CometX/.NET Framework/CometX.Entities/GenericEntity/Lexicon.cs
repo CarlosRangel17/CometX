@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CometX.Entities.GenericEntity
+﻿namespace CometX.Entities.GenericEntity
 {
     public class Lexicon
     {
@@ -13,7 +7,14 @@ namespace CometX.Entities.GenericEntity
 
         public Lexicon()
         {
+            Key = "";
+            Value = "";
+        }
 
+        public Lexicon(string key, string value)
+        {
+            Key = key;
+            Value = value;
         }
     }
 }

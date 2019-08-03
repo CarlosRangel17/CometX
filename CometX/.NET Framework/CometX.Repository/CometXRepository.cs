@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
-using System.Configuration;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using CometX.Repository.Utilities;
@@ -10,69 +10,66 @@ using CometX.Attributes.Extensions.RelationalDBExtensions;
 
 namespace CometX.Repository
 {
-    public class CometXRepository : ICometXRepository
+    public class CometXRepository : BaseRepository, ICometXRepository
     {
         #region global variable(s)
-        private static string Key { get; set; }
-        private static string ConnectionString { get; set; }
-        private readonly SqlUtils SqlUtil;
         private static readonly QueryUtils QueryUtil = new QueryUtils();
         #endregion
 
         #region constructor(s)
         public CometXRepository()
         {
-            ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            if (ConnectionString.Contains("metadata")) ConnectionString = ConnectionString.ExtrapolateMetaDataFromConnectionString();
-            SqlUtil = new SqlUtils(ConnectionString);
+            SetConfiguration();
         }
 
-        public CometXRepository(string key = "")
+        public CometXRepository(string key)
         {
-            Key = !string.IsNullOrWhiteSpace(key) ? key : "DefaultConnection";
-            ConnectionString = ConfigurationManager.ConnectionStrings[Key].ConnectionString;
-            if (ConnectionString.Contains("metadata")) ConnectionString = ConnectionString.ExtrapolateMetaDataFromConnectionString();
-            SqlUtil = new SqlUtils(ConnectionString);
+            SetConfiguration(key);
         }
 
-        public CometXRepository(string key = "", string connectionString = "")
+        public CometXRepository(string key, string connectionString)
         {
-            Key = key ?? "DefaultConnection";
-            ConnectionString = connectionString ?? ConfigurationManager.ConnectionStrings[Key].ConnectionString;
-            if (ConnectionString.Contains("metadata")) ConnectionString = ConnectionString.ExtrapolateMetaDataFromConnectionString();
-            SqlUtil = new SqlUtils(ConnectionString);
+            SetConfiguration(key, connectionString);
         }
         #endregion
 
         #region public methods
+        /// <summary>
+        /// Returns a flag based off query condition provided. 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        public bool CheckTable<T>(Expression<Func<T, bool>> expression)
+        {
+            try
+            {
+                string query = BaseQuery.SELECT_FROM_WHERE_EXISTS<T>(QueryUtil.Translate(expression));
+
+                return SqlUtil.CheckDynamicQuery(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(CustomErrorResponse(ex));
+            }
+        }
+
         /// <summary>
         /// Deletes the specified entity based off Primary Key attribute.
         /// </summary>
         /// <param name="entity"></param>
         public void Delete<T>(T entity) where T : new()
         {
-            string query = "";
-
             try
             {
                 if (entity == null) throw new ArgumentNullException("entity");
 
-                query = BaseQuery.DELETE_WHERE<T>(entity.ToDeleteQuery());
-
+                string query = BaseQuery.DELETE_WHERE<T>(entity.ToDeleteQuery());
                 SqlUtil.ExecuteDynamicQuery(query);
             }
             catch (Exception ex)
             {
-                var message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-
-                    message += "\n" + ex.Message;
-                }
-
-                throw new Exception(message);
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -82,32 +79,77 @@ namespace CometX.Repository
         /// <param name="entity"></param>
         public void Delete<T>(Expression<Func<T, bool>> expression, bool deleteAll = false)
         {
-            string query = "";
-
             try
             {
                 string table = typeof(T).Name;
 
-                string condition = QueryUtil.Translate(expression);
+                string condition = expression == null ? "" : QueryUtil.Translate(expression);
 
-                query = deleteAll
-                    ? BaseQuery.DELETE_WHERE<T>(new string[] { table, condition })
+                string query = deleteAll
+                    ? (string.IsNullOrWhiteSpace(condition) ? BaseQuery.DELETE_ALL<T>(table) : BaseQuery.DELETE_WHERE<T>(new string[] { table, condition }))
                     : BaseQuery.DELETE_FIRST_WHERE<T>(new string[] { table, condition });
 
                 SqlUtil.ExecuteDynamicQuery(query);
             }
             catch (Exception ex)
             {
-                var message = ex.Message;
+                throw new Exception(CustomErrorResponse(ex));
+            }
+        }
 
-                while (ex.InnerException != null)
+        /// <summary>
+        /// Run a stored procedure or sql query 
+        /// </summary>
+        /// <param name="commandType"></param>
+        /// <param name="parameters"></param>
+        public void ExecuteSQL(CommandType commandType, string statement, Dictionary<string, string> parameters = null)
+        {
+            try
+            {
+                switch (commandType)
                 {
-                    ex = ex.InnerException;
-
-                    message += "\n" + ex.Message;
+                    case CommandType.StoredProcedure:
+                        SqlUtil.ExecuteStoredProc(statement, parameters);
+                        break;
+                    case CommandType.Text:
+                        SqlUtil.ExecuteDynamicQuery(statement);
+                        break;
+                    case CommandType.TableDirect:
+                        throw new Exception("Command type 'TableDirect' not implemented yet.");
+                    default:
+                        throw new Exception("Command type not recognized.");
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(CustomErrorResponse(ex));
+            }
+        }
 
-                throw new Exception(message);
+        /// <summary>
+        /// Run a stored procedure or sql query check
+        /// </summary>
+        /// <param name="commandType"></param>
+        /// <param name="parameters"></param>
+        public bool ExecuteSQLCheck(CommandType commandType, string statement, Dictionary<string, string> parameters = null)
+        {
+            try
+            {
+                switch (commandType)
+                {
+                    case CommandType.StoredProcedure:
+                        return SqlUtil.CheckStoredProc(statement, parameters);
+                    case CommandType.Text:
+                        return SqlUtil.CheckDynamicQuery(statement);
+                    case CommandType.TableDirect:
+                        throw new Exception("Command type 'TableDirect' not implemented yet.");
+                    default:
+                        throw new Exception("Command type not recognized.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -130,6 +172,7 @@ namespace CometX.Repository
             }
             catch (Exception ex)
             {
+                // TODO: Replace catch-block with ==> throw new Exception(CustomErrorResponse(ex));
                 // Default to query all records, then apply predicate -- Need to figure out the try section
                 return SqlUtil.GetMultipleInfo<T>(BaseQuery.SELECT_FROM<T>(), null, true).FirstOrDefault(expression.Compile());
             }
@@ -149,15 +192,7 @@ namespace CometX.Repository
             }
             catch (Exception ex)
             {
-                string message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-                    message += ex.Message;
-                }
-
-                throw new Exception(message);
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -174,15 +209,7 @@ namespace CometX.Repository
             }
             catch (Exception ex)
             {
-                string message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-                    message += ex.Message;
-                }
-
-                throw new Exception(message);
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -192,55 +219,17 @@ namespace CometX.Repository
         /// <param name="entity"></param>
         public void Insert<T>(T entity) where T : new()
         {
-            string query = "";
             try
             {
                 if (entity == null) throw new ArgumentNullException("entity");
 
-                query = BaseQuery.INSERT<T>(entity.ToInsertQuery());
+                string query = BaseQuery.INSERT<T>(entity.ToInsertQuery());
 
                 SqlUtil.ExecuteDynamicQuery(query);
             }
             catch (Exception ex)
             {
-                var message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-
-                    message += "\n" + ex.Message;
-                }
-
-                throw new Exception(message);
-            }
-        }
-
-        /// <summary>
-        /// Returns a flag based off query condition provided. 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="expression"></param>
-        /// <returns></returns>
-        public bool CheckTable<T>(Expression<Func<T, bool>> expression)
-        {
-            try
-            {
-                var query = BaseQuery.SELECT_FROM_WHERE_EXISTS<T>(QueryUtil.Translate(expression));
-
-                return SqlUtil.CheckDynamicQuery(query);
-            }
-            catch (Exception ex)
-            {
-                string message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-                    message += ex.Message;
-                }
-
-                throw new Exception(message);
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -272,17 +261,7 @@ namespace CometX.Repository
             }
             catch (Exception ex)
             {
-                string message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-                    message += ex.Message;
-                }
-
-                throw new Exception(message);
-                // Default to query all records, then apply predicate -- Need to figure out the try section
-                // return SqlUtil.GetMultipleInfo<T>(BaseQuery.SELECT_FROM_ORDER_BY<T>(sortDirection, sortValue), null, true).Where(expression.Compile()).ToList();
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -302,15 +281,7 @@ namespace CometX.Repository
             }
             catch (Exception ex)
             {
-                string message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-                    message += ex.Message;
-                }
-
-                throw new Exception(message);
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
 
@@ -330,6 +301,7 @@ namespace CometX.Repository
             }
             catch (Exception ex)
             {
+                // TODO: Replace catch-block with ==> throw new Exception(CustomErrorResponse(ex));
                 // Default to query all records, then apply predicate
                 return SqlUtil.GetMultipleInfo<T>(BaseQuery.SELECT_FROM_WHERE<T>(), null, true).Where(expression.Compile()).ToList();
             }
@@ -341,29 +313,18 @@ namespace CometX.Repository
         /// <param name="entity"></param>
         public void Update<T>(T entity, Expression<Func<T, bool>> expression = null) where T : new()
         {
-            string query = "";
-
             try
             {
                 if (entity == null) throw new ArgumentNullException("entity");
 
                 string condition = expression == null ? "" : QueryUtil.Translate(expression);
 
-                query = BaseQuery.UPDATE_WHERE<T>(entity.ToUpdateQuery(condition));
-
+                string query = BaseQuery.UPDATE_WHERE<T>(entity.ToUpdateQuery(condition));
                 SqlUtil.ExecuteDynamicQuery(query);
             }
             catch (Exception ex)
             {
-                string message = ex.Message;
-
-                while (ex.InnerException != null)
-                {
-                    ex = ex.InnerException;
-                    message += ex.Message;
-                }
-
-                throw new Exception(message);
+                throw new Exception(CustomErrorResponse(ex));
             }
         }
         #endregion

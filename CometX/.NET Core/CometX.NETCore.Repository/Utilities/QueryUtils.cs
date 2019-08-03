@@ -15,7 +15,7 @@ namespace CometX.NETCore.Repository.Utilities
         //private string _any = string.Empty;
         private string _contains = string.Empty;
         //private string _count = string.Empty;
-        //private string _equal = string.Empty;
+        private string _equal = string.Empty;
         private int? _skip = null;
         private int? _take = null;
         private string _whereClause = string.Empty;
@@ -91,6 +91,11 @@ namespace CometX.NETCore.Repository.Utilities
         public string CompileQueryClause()
         {
             string query = "";
+
+            if (!string.IsNullOrWhiteSpace(_equal))
+            {
+                query += _equal;
+            }
 
             if (!string.IsNullOrWhiteSpace(_contains))
             {
@@ -176,14 +181,20 @@ namespace CometX.NETCore.Repository.Utilities
                     return this.Visit(nextExpression);
                 }
             }
-            //else if (m.Method.Name == "Equals")
-            //{
-            //    if (this.ParseEqualsExpression(m))
-            //    {
-            //        Expression nextExpression = m.Arguments[1];
-            //        return this.Visit(nextExpression);
-            //    }
-            //}
+            else if (m.Method.Name == "Equals")
+            {
+                if (this.ParseEqualsExpression(m))
+                {
+                    //sb.Append("(");
+                    //this.Visit(m.Arguments[0]);
+                    //sb.Append(" = ");
+                    //this.Visit(m.Arguments[1]);
+                    //sb.Append(")");
+                    return m;
+                    //Expression nextExpression = m.Arguments[0];
+                    //return this.Visit(nextExpression);
+                }
+            }
             //else if (m.Method.Name == "Any")
             //{
             //    if (this.ParseAnyExpression(m))
@@ -401,19 +412,27 @@ namespace CometX.NETCore.Repository.Utilities
         //    return true;
         //}
 
-        //private bool ParseEqualsExpression(MethodCallExpression expression)
-        //{
-        //    try
-        //    {
-        //        //TODO: Need to implement
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return false;
-        //    }
+        // TODO: Doesn't work with 'NOT' unary operator at the moment.
+        private bool ParseEqualsExpression(MethodCallExpression expression)
+        {
+            try
+            {
+                if (expression.Arguments.Count != 1) return false;
 
-        //    return true;
-        //}
+                string obj = expression.Object.ToString().Split('.')[1]; // "left"
+                var constExp = expression.Arguments[0] as ConstantExpression;
+                object column = constExp.Value; // "right"
+
+                // Write the expression 
+                _equal += (string.IsNullOrWhiteSpace(_equal) ? "" : " AND ") + string.Format("('{0}' = {1})", column, obj);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
         private bool ParseContainsExpression(MethodCallExpression expression)
         {
@@ -541,5 +560,4 @@ namespace CometX.NETCore.Repository.Utilities
             return false;
         }
     }
-
 }

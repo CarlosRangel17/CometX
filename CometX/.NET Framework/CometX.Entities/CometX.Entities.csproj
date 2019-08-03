@@ -46,6 +46,7 @@
     <Compile Include="Extensions\DictionaryExtension.cs" />
     <Compile Include="Extensions\EnumExtension.cs" />
     <Compile Include="Extensions\LexiconExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Extensions\TableExtension.cs" />
     <Compile Include="Extensions\ValidationExtension.cs" />
     <Compile Include="FileExplorerEntity\File.cs" />

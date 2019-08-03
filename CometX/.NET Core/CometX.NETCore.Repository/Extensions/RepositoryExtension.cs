@@ -46,7 +46,7 @@ namespace CometX.NETCore.Repository.Extensions
             Type baseType = typeof(T);
 
             // Write Parameters to insert
-            args.Add(string.Format("{0}", (properties.Aggregate("", (message, property) => message + (baseType.GetProperty(property.Name).HasAttributeRestrictions() ? "" : property.Name + ", "))).TrimEndAllSpaceAndCommas()));
+            args.Add(string.Format("{0}", (properties.Aggregate("", (message, property) => message + (baseType.GetProperty(property.Name).HasAttributeRestrictions() ? "" : (property.HasDbColumnAttribute() ? "[" + property.GetDbColumnAttributeMapping() + "]" : property.Name) + ", "))).TrimEndAllSpaceAndCommas()));
 
             // Write Values to insert
             var arg3 = string.Format("{0}", (properties.Aggregate("", (message, property) => message + (property.HasAttributeRestrictions() ? "" : property.GetEntityValue(entity) + ", ")).TrimEndAllSpaceAndCommas()));

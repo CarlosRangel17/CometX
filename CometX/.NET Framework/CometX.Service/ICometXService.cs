@@ -2,6 +2,7 @@
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using CometX.Entities.TableEntity;
+using CometX.Entities.GenericEntity;
 
 namespace CometX.Service
 {
@@ -22,6 +23,10 @@ namespace CometX.Service
         void InsertWithContext<T>(ref T entity) where T : new();
         void MarkActive<T>(int id) where T : new();
         void MarkActiveByKey<T>(object key) where T : new();
+        void RunProcedure(string storedProcedure, Lexicon param = null);
+        void RunProcedure(string storedProcedure, List<Lexicon> parameters);
+        bool RunProcedureCheck(string storedProcedure, Lexicon param = null);
+        bool RunProcedureCheck(string storedProcedure, List<Lexicon> parameters);
         void Save<T>(T entity) where T : new();
         void Update<T>(T entity) where T : new();
         void Update<T>(T entity, Expression<Func<T, bool>> expression) where T : new();
