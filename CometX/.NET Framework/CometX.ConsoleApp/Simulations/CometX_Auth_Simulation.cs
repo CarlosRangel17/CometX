@@ -25,7 +25,6 @@ namespace CometX.ConsoleApp.Simulations
                 AuthorizedOriginId = 2,
                 CreatedOn = DateTime.Now,
                 ExpiresOn = DateTime.Now.AddMinutes(30),
-                IssuedOn = DateTime.Now
             });
         }
 

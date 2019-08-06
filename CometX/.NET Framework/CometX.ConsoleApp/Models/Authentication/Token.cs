@@ -11,7 +11,7 @@ namespace CometX.ConsoleApp.Models.Authentication
     {
         [PrimaryKey]
         public int Id { get; set; }
-        public DateTime CreatedOn { get; set; }
+
         [PropertyNotMapped]
         public virtual string CreatedOnString { get; set; }
 
@@ -21,7 +21,8 @@ namespace CometX.ConsoleApp.Models.Authentication
         }
         [DBColumn("Key")]
         public virtual string Key { get; set; }
-        public virtual DateTime IssuedOn { get; set; }
+        [DBColumn("IssuedOn")]
+        public DateTime CreatedOn { get; set; }
         public virtual DateTime ExpiresOn { get; set; }
         public virtual int AuthorizedOriginId { get; set; }
         //[PropertyNotMapped]
