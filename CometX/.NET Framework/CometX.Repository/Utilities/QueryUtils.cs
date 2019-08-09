@@ -356,7 +356,10 @@ namespace CometX.Repository.Utilities
         {
             if (m.Expression != null && m.Expression.NodeType == ExpressionType.Parameter)
             {
-                sb.Append(m.Member.Name);
+                var paramValue = m.Member.Name;
+                if (m.Type == typeof(bool)) paramValue = string.Format("{0} = 1", paramValue);
+
+                sb.Append(paramValue);
                 return m;
             }
 
@@ -381,6 +384,8 @@ namespace CometX.Repository.Utilities
 
                 // Check if Type equals DateTime; if so, apply single quotes 
                 if (m.Type == typeof(DateTime)) queryExp = string.Format("'{0}'", queryExp);
+
+                if (m.Type.IsEnum) expValue = Expression.Constant(Convert.ToInt32(value), typeof(int));
 
                 sb.Append(string.Format(queryExp, expValue));
                 return m;
