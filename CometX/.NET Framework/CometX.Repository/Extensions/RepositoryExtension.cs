@@ -74,7 +74,8 @@ namespace CometX.Repository.Extensions
 
                 if (propertyInfo.HasAttributeRestrictions()) continue;
 
-                query += prop.Name + " = " + prop.GetEntityValue(entity) + ", ";
+                query += "[" + prop.Name + "]" + " = " + prop.GetEntityValue(entity) + ", ";
+                //query += string.Format("[{0}] = {1} , ", prop.Name, prop.GetEntityValue(entity));
             }
 
             args.Add(query.TrimEndAllSpaceAndCommas());
