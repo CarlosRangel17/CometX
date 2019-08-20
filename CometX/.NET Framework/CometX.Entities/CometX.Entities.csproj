@@ -57,6 +57,7 @@
     <Compile Include="TableEntity\ColumnValue.cs" />
     <Compile Include="TableEntity\Table.cs" />
     <Compile Include="TableEntity\TableEnumerations.cs" />
+    <Compile Include="TableEntity\TablePaginationModel.cs" />
     <Compile Include="TableEntity\Value.cs" />
   </ItemGroup>
   <ItemGroup />
