@@ -109,7 +109,7 @@ namespace CometX.Repository.Utilities
 
             if (!string.IsNullOrWhiteSpace(sb.ToString()) && string.IsNullOrWhiteSpace(query))
             {
-                var sbQuery = sb.ToString().Replace('"', '\'');
+                var sbQuery = sb.ToString().Replace('"', '\'').Replace("= 1 =", "=").Replace("False", "0").Replace("True", "1");
                 query = sbQuery;
             }
 
@@ -358,6 +358,7 @@ namespace CometX.Repository.Utilities
             {
                 var paramValue = m.Member.Name;
                 if (m.Type == typeof(bool)) paramValue = string.Format("{0} = 1", paramValue);
+                else paramValue = string.Format("[{0}]", paramValue);
 
                 sb.Append(paramValue);
                 return m;
@@ -395,6 +396,10 @@ namespace CometX.Repository.Utilities
             {
                 var value = Expression.Lambda(m).Compile().DynamicInvoke();
                 var expValue = Expression.Constant(value, m.Type);
+
+                // Check if Type is Enum; if so, convert to int representation 
+                if (m.Type.IsEnum) expValue = Expression.Constant(Convert.ToInt32(value), typeof(int));
+
                 sb.Append(string.Format("{0}", expValue));
                 return m;
             }
