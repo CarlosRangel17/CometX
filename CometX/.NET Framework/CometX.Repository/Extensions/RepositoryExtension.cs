@@ -46,7 +46,12 @@ namespace CometX.Repository.Extensions
             Type baseType = typeof(T);
 
             // Write Parameters to insert
-            args.Add(string.Format("{0}", (properties.Aggregate("", (message, property) => message + (baseType.GetProperty(property.Name).HasAttributeRestrictions() ? "" : (property.HasDbColumnAttribute() ? "[" + property.GetDbColumnAttributeMapping() + "]" : property.Name) + ", "))).TrimEndAllSpaceAndCommas()));
+            args.Add(string.Format("{0}", (properties.Aggregate("", (message, property) => 
+                message + (baseType.GetProperty(property.Name).HasAttributeRestrictions() 
+                ? "" 
+                : (property.HasDbColumnAttribute() 
+                    ? "[" + property.GetDbColumnAttributeMapping() + "]" 
+                    : property.Name) + ", "))).TrimEndAllSpaceAndCommas()));
 
             // Write Values to insert
             var arg3 = string.Format("{0}", (properties.Aggregate("", (message, property) => message + (property.HasAttributeRestrictions() ? "" : property.GetEntityValue(entity) + ", ")).TrimEndAllSpaceAndCommas()));
@@ -72,7 +77,10 @@ namespace CometX.Repository.Extensions
             {
                 PropertyInfo propertyInfo = baseType.GetProperty(prop.Name);
 
-                if (propertyInfo.HasAttributeRestrictions()) continue;
+                // Continue if there are any attribute restrictions 
+                if (propertyInfo.HasAttributeRestrictions()
+                    // OR if the property name equals 'CreatedOn
+                    || (!string.IsNullOrWhiteSpace(prop.Name) && prop.Name.Equals("CreatedOn"))) continue;
 
                 query += "[" + prop.Name + "]" + " = " + prop.GetEntityValue(entity) + ", ";
                 //query += string.Format("[{0}] = {1} , ", prop.Name, prop.GetEntityValue(entity));
