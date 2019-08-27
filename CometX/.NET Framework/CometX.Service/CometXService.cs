@@ -179,7 +179,8 @@ namespace CometX.Service
         /// <param name="id"></param>
         public void MarkActive<T>(int id) where T : new()
         {
-            _repo.Update(MarkPropertyActive(_repo.GetById<T>(id)));
+            var flag = !_repo.CheckActive<T>(id);
+            _repo.MarkActive<T>(id, flag);
         }
 
         /// <summary>
@@ -189,7 +190,7 @@ namespace CometX.Service
         /// <param name="key"></param>
         public void MarkActiveByKey<T>(object key) where T : new()
         {
-            _repo.Update(MarkPropertyActive(_repo.GetByKey<T>(key)));
+            _repo.Update(ToggleFlagAttribute(_repo.GetByKey<T>(key)));
         }
 
         /// <summary>
@@ -332,11 +333,11 @@ namespace CometX.Service
         /// <typeparam name="T"></typeparam>
         /// <param name="record"></param>
         /// <returns></returns>
-        private object MarkPropertyActive<T>(T record) where T : new()
+        private object ToggleFlagAttribute<T>(T record) where T : new()
         {
             var propertyInfo = typeof(T).GetProperties().First(x => x.HasFlagAttribute());
             var currentValue = propertyInfo.GetEntityValue(record).ConvertBitStringToBool();
-            propertyInfo.SetValue(record, currentValue, propertyInfo.GetIndexParameters());
+            propertyInfo.SetValue(record, !currentValue, propertyInfo.GetIndexParameters());
             return record;
         }
         #endregion

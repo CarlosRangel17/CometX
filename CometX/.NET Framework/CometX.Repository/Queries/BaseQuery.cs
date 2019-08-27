@@ -10,10 +10,12 @@ namespace CometX.Repository.Queries
         public static string SELECT_FROM_WHERE_QUERY = "SELECT * FROM [{0}] WHERE {1}";
         public static string SELECT_FROM_WHERE_EXISTS_QUERY = "SELECT CASE WHEN EXISTS (SELECT * FROM [{0}] WHERE {1}) THEN 1 ELSE 0 END AS 'Result'";
         public static string SELECT_FROM_WHERE_ORDER_BY_QUERY = "SELECT * FROM [{0}] WHERE {1} ORDER BY {2} {3}";
+        public static string SELECT_IS_ACTIVE_FROM_WHERE_QUERY = "SELECT [IsActive] AS 'Result' FROM [{0}] WHERE [Id] = {1}";
         public static string DELETE_ALL_QUERY = "DELETE FROM [{0}]";
         public static string DELETE_WHERE_QUERY = "DELETE FROM [{0}] WHERE {1}";
         public static string DELETE_FIRST_WHERE_QUERY = "DELETE TOP (1) FROM [{0}] WHERE {1}";
         public static string INSERT_QUERY = "INSERT INTO [{0}] ({1}) VALUES({2})";
+        public static string MARK_ACTIVE_QUERY = "UPDATE [{0}] SET [IsActive] = ({1}) WHERE Id = {2}";
         public static string ORDER_BY_QUERY = "ORDER BY {0} {1}";
         public static string UPDATE_ALL_QUERY = "UPDATE [{0}] SET {1}";
         public static string UPDATE_WHERE_QUERY = "UPDATE [{0}] SET {1} WHERE {2}";
@@ -46,6 +48,11 @@ namespace CometX.Repository.Queries
         public static string INSERT<T>(object[] parameters)
         {
             return string.Format(INSERT_QUERY, parameters);
+        }
+
+        public static string MARK_ACTIVE<T>(bool isActive, int id)
+        {
+            return string.Format(MARK_ACTIVE_QUERY, typeof(T).Name, isActive ? 1 : 0, id);
         }
 
         public static string SELECT_FIRST_FROM<T>(string condition = "")
@@ -86,6 +93,12 @@ namespace CometX.Repository.Queries
             return string.Format(SELECT_FROM_WHERE_ORDER_BY_QUERY, typeof(T).Name, condition, sortValue, sortDirection);
 
         }
+
+        public static string SELECT_IS_ACTIVE_FROM_WHERE<T>(int id)
+        {
+            return string.Format(SELECT_IS_ACTIVE_FROM_WHERE_QUERY, typeof(T).Name, id);
+        }
+
         public static string UPDATE_WHERE<T>(object[] parameters)
         {
             return string.Format(UPDATE_WHERE_QUERY, parameters);

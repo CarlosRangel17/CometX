@@ -35,6 +35,26 @@ namespace CometX.Repository
 
         #region public methods
         /// <summary>
+        /// Checks the flag status of a flag attribute. 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool CheckActive<T>(int id)
+        {
+            try
+            {
+                string query = BaseQuery.SELECT_IS_ACTIVE_FROM_WHERE<T>(id);
+
+                return SqlUtil.CheckDynamicQuery(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(CustomErrorResponse(ex));
+            }
+        }
+
+        /// <summary>
         /// Returns a flag based off query condition provided. 
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -224,6 +244,26 @@ namespace CometX.Repository
                 if (entity == null) throw new ArgumentNullException("entity");
 
                 string query = BaseQuery.INSERT<T>(entity.ToInsertQuery());
+
+                SqlUtil.ExecuteDynamicQuery(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(CustomErrorResponse(ex));
+            }
+        }
+
+        /// <summary>
+        /// Toggles the Flag Attribute active or inactive.
+        /// </summary>
+        /// <param name="entity"></param>
+        public void MarkActive<T>(int id, bool isActive) where T : new()
+        {
+            try
+            {
+                if (id == 0) throw new ArgumentNullException("id");
+
+                string query = BaseQuery.MARK_ACTIVE<T>(isActive, id);
 
                 SqlUtil.ExecuteDynamicQuery(query);
             }
