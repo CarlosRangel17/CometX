@@ -1,4 +1,4 @@
-# What is CometX ?
+# The CometX Project
 
 CometX allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. 
 
@@ -6,7 +6,20 @@ CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/p
 
 CometX is currently developed targeting net451, and plans to target netcore 2.1 are expected in the near future; ultimately, CometX is targeting compatibility among all operating systems (Windows, Linx, MacOS) by 06/01/2020 - see [Future Plans]() for more information.  
 
-## Quick Installation
+# Getting Started 
+```
+1. Issues, Requests, and Help
+2. Documentation 
+3. Quick Installation 
+```
+
+## 1. Issues, Requests, and Help 
+Please utilize the [Issues](https://github.com/CarlosRangel17/CometX/issues) page for any issues, requests, or help needed with the CometX project.
+
+## 2. Documentation 
+Please find all relevant documentation and guides for CometX in the [Wiki](https://github.com/CarlosRangel17/CometX/wiki). 
+
+## 3. Quick Installation
 
 The CometX project currently offers one package for users of .Net Framework (v4.5.1 or greater). See [Future Plans](https://github.com/CarlosRangel17/CometX/wiki/Future-Plans) for .Net Core packages. 
 
@@ -44,4 +57,4 @@ See also the list of [contributors](https://github.com/CarlosRangel7/CometX/cont
 ## Acknowledgments
 
 * Hat tip to [Keyur Patel](https://github.com/simkeyur) for becoming the official CometX Beta tester
-* Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum), [iText](https://github.com/itext/itextsharp)
+* Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum), [iText](https://github.com/itext/itextsharp), [Flex Layout](https://github.com/angular/flex-layout)
