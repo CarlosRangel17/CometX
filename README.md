@@ -6,28 +6,7 @@ CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/p
 
 CometX is currently developed targeting net451, and plans to target netcore 2.1 are expected in the near future; ultimately, CometX is targeting compatibility among all operating systems (Windows, Linx, MacOS) by 06/01/2020 - see [Future Plans]() for more information.  
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-1. Install .Net 
-2. Create your app
-3. 
-```
-
-#### 1. Install .Net
-CometX works with .Net Framework (from 4.5.1 upwards). You’ll need to have the .Net SDK installed. For new starters we recommend .Net core. Mac or Linux users will also need .Net Core.
-
-Not sure which .Net SDK to download? - choose .Net Framework 4.8.
-
-[Download .Net SDK](https://dotnet.microsoft.com/download)
-
-### Quick Installation
+## Quick Installation
 
 The CometX project currently offers one package for users of .Net Framework (v4.5.1 or greater). See [Future Plans](https://github.com/CarlosRangel17/CometX/wiki/Future-Plans) for .Net Core packages. 
 
@@ -48,36 +27,6 @@ PM > Install-Package CometX -Version 1.6.2
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -88,16 +37,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Carlos Rangel** - *Initial work* - [CometX](https://github.com/CarlosRangel7/CometX)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+See also the list of [contributors](https://github.com/CarlosRangel7/CometX/contributors) who participated in this project.
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Hat tip to [Keyur Patel](https://github.com/simkeyur) for inadvertently becoming the CometX Beta tester 
+* Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum)
