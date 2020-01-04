@@ -2,36 +2,49 @@
 
 CometX allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. 
 
-CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/packages/Microsoft.ApplicationBlocks.Data/) with [Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) practces in mind, which leverages a programming pattern referred to as "[convention over configuration](https://markheath.net/post/convention-over-configuration)" (or coding by convention)
+CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/packages/Microsoft.ApplicationBlocks.Data/) with [Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) practices in mind, which leverages a programming pattern referred to as "[convention over configuration](https://markheath.net/post/convention-over-configuration)" (or coding by convention)
 
-CometX is developed targeting net451 and netcore 2.1 (in progress).  Soon CometX will be compatible with all operating systems (Windows, Linx, MacOS) - See [Future Plans]() for more information.  
+CometX is currently developed targeting net451, and plans to target netcore 2.1 are expected in the near future; ultimately, CometX is targeting compatibility among all operating systems (Windows, Linx, MacOS) by 06/01/2020 - see [Future Plans]() for more information.  
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+1. Install .Net 
+2. Create your app
+3. 
 ```
 
-### Installing
+#### 1. Install .Net
+CometX works with .Net Framework (from 4.5.1 upwards). You’ll need to have the .Net SDK installed. For new starters we recommend .Net core. Mac or Linux users will also need .Net Core.
 
-A step by step series of examples that tell you how to get a development env running
+Not sure which .Net SDK to download? - choose .Net Framework 4.8.
 
-Say what the step will be
+[Download .Net SDK](https://dotnet.microsoft.com/download)
 
+### Quick Installation
+
+The CometX project currently offers one package for users of .Net Framework (v4.5.1 or greater). See [Future Plans](https://github.com/CarlosRangel17/CometX/wiki/Future-Plans) for .Net Core packages. 
+
+To install the latest version, we strongly recommend that you use [NuGet](https://www.nuget.org/packages/CometX/) to add CometX to your project:
+
+``` 
+PM > Install-Package CometX -Version 1.6.2 
 ```
-Give the example
-```
 
-And repeat
-
-```
-until finished
-```
+### What's included? 
+#### Main Libraries 
+| Project Source | Nuget Package | Description | 
+| --- | --- | --- |
+| CometX.Attributes | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) |  |
+| CometX.Entities | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
+| CometX.Repository | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
+| CometX.Service | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
 
 End with an example of getting some data out of the system or using it for a little demo
 
