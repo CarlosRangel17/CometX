@@ -43,5 +43,5 @@ See also the list of [contributors](https://github.com/CarlosRangel7/CometX/cont
 
 ## Acknowledgments
 
-* Hat tip to [Keyur Patel](https://github.com/simkeyur) for inadvertently becoming the CometX Beta tester 
+* Hat tip to [Keyur Patel](https://github.com/simkeyur) for becoming the official CometX Beta tester
 * Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum)
