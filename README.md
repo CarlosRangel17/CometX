@@ -11,6 +11,9 @@ CometX is currently developed targeting net451, and plans to target netcore 2.1 
 1. Issues, Requests, and Help
 2. Documentation 
 3. Quick Installation 
+4. Contributing 
+5. Authors
+6. Acknowledgements 
 ```
 
 ## 1. Issues, Requests, and Help 
@@ -29,7 +32,6 @@ To install the latest version, we strongly recommend that you use [NuGet](https:
 PM > Install-Package CometX -Version 1.6.2 
 ```
 
-### What's included? 
 #### Main Libraries 
 | Project Source | Nuget Package | Description | 
 | --- | --- | --- |
@@ -40,21 +42,17 @@ PM > Install-Package CometX -Version 1.6.2
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Contributing
+## 4. Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
+## 5. Authors
 
 * **Carlos Rangel** - *Initial work* - [CometX](https://github.com/CarlosRangel7/CometX)
 
 See also the list of [contributors](https://github.com/CarlosRangel7/CometX/contributors) who participated in this project.
 
-## Acknowledgments
+## 6. Acknowledgments
 
 * Hat tip to [Keyur Patel](https://github.com/simkeyur) for becoming the official CometX Beta tester
 * Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum), [iText](https://github.com/itext/itextsharp), [Flex Layout](https://github.com/angular/flex-layout)
