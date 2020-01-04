@@ -1,5 +1,7 @@
 # The CometX Project
 
+![CometX COADM Logo](https://user-images.githubusercontent.com/11052295/71770107-ba3ee680-2eee-11ea-8dde-7eac350b4069.png)
+
 CometX allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. 
 
 CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/packages/Microsoft.ApplicationBlocks.Data/) with [Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) practices in mind, which leverages a programming pattern referred to as "[convention over configuration](https://markheath.net/post/convention-over-configuration)" (or coding by convention)
