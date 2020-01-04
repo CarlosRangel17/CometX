@@ -10,14 +10,14 @@ The following figure illustrates where CometX fits into your application.
 ![CometX Architecture Backsplash](https://user-images.githubusercontent.com/11052295/71771649-51faff80-2f04-11ea-9245-2986587abf06.png)
 
 # Getting Started 
-```
+
 1. Issues, Requests, and Help
 2. Documentation 
 3. Quick Installation 
 4. Contributing 
 5. Authors
 6. Acknowledgements 
-```
+
 
 ## 1. Issues, Requests, and Help 
 Please utilize the [Issues](https://github.com/CarlosRangel17/CometX/issues) page for any issues, requests, or help needed with the CometX project.
