@@ -1,7 +1,10 @@
-# CometX 
+# What is CometX? 
 
-The CometX Framework allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. CometX was built with [Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) practces in mind, which leverages a programming pattern referred to as "[convention over configuration](https://markheath.net/post/convention-over-configuration)" (or coding by convention)
+CometX allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. 
 
+CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/packages/Microsoft.ApplicationBlocks.Data/) with [Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) practces in mind, which leverages a programming pattern referred to as "[convention over configuration](https://markheath.net/post/convention-over-configuration)" (or coding by convention)
+
+CometX is developed targeting net451 and netcore 2.1 (in progress).  Soon CometX will be compatible with all operating systems (Windows, Linx, MacOS) - See [Future Plans]() for more information.  
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
