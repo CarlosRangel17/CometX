@@ -1,6 +1,6 @@
 # CometX 
 
-One Paragraph of project description goes here
+The CometX Framework allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. CometX was built with [Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) practces in mind, which leverages a programming pattern referred to as "[convention over configuration](https://markheath.net/post/convention-over-configuration)" (or coding by convention)
 
 ## Getting Started
 
