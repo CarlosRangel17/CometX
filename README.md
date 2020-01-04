@@ -44,4 +44,4 @@ See also the list of [contributors](https://github.com/CarlosRangel7/CometX/cont
 ## Acknowledgments
 
 * Hat tip to [Keyur Patel](https://github.com/simkeyur) for becoming the official CometX Beta tester
-* Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum)
+* Inspirations include: [Nethereum](https://github.com/Nethereum/Nethereum), [iText](https://github.com/itext/itextsharp)
