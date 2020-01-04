@@ -1,4 +1,4 @@
-# What is CometX? 
+# About CometX  
 
 CometX allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. 
 
