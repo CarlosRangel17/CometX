@@ -50,7 +50,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 * **Carlos Rangel** - *Initial work* - [CometX](https://github.com/CarlosRangel17/CometX)
 
-See also the list of [contributors](https://github.com/CarlosRangel7/CometX/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/CarlosRangel17/CometX/contributors) who participated in this project.
 
 ## 6. Acknowledgments
 
