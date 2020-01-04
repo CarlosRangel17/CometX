@@ -6,6 +6,9 @@ CometX was built upon [Microsoft.Data.ApplicationBlocks](https://www.nuget.org/p
 
 CometX is currently developed targeting net451, and plans to target netcore 2.1 are expected in the near future; ultimately, CometX is targeting compatibility among all operating systems (Windows, Linx, MacOS) by 06/01/2020 - see [Future Plans]() for more information.  
 
+The following figure illustrates where CometX fits into your application. 
+![CometX Architecture Backsplash](https://user-images.githubusercontent.com/11052295/71771649-51faff80-2f04-11ea-9245-2986587abf06.png)
+
 # Getting Started 
 ```
 1. Issues, Requests, and Help
