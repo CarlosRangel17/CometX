@@ -9,7 +9,7 @@ CometX is currently developed targeting net451, and plans to target netcore 2.1 
 The following figure illustrates where CometX fits into your application. 
 ![CometX Architecture Backsplash](https://user-images.githubusercontent.com/11052295/71771649-51faff80-2f04-11ea-9245-2986587abf06.png)
 
-# Getting Started 
+# Quick Navigation 
 ```
 1. Issues, Requests, and Help
 2. Documentation 
