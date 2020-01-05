@@ -1,4 +1,4 @@
-#  The CometX Project ![CometX COADM Logo - Variant 3 (XS)](https://user-images.githubusercontent.com/11052295/71770401-bf516500-2ef1-11ea-96d3-6a9852af3bf7.png)
+#  The CometX Project ![CometX COADM Logo - Variant 2 Fade (XS)](https://user-images.githubusercontent.com/11052295/71773316-ec693c00-2f20-11ea-96f8-f5a5cc830c39.png)
 
 CometX allows you to use your own domain classes to represent the model that CometX relies on to perform any number of data accessing requirements such as querying, change tracking, and updating functions. 
 
