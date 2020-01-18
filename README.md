@@ -38,8 +38,8 @@ PM > Install-Package CometX -Version 1.6.2
 #### Main Libraries 
 | Project Source | Nuget Package | Description | 
 | --- | --- | --- |
-| CometX.Attributes | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) |  |
-| CometX.Entities | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
+| CometX.Attributes | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Attributes library can be broken into two categories: 1-Property, & 2-Relational. Both are used to add metadata to class properties which the CometXRepository can utilize for a range of query operations. |
+| CometX.Entities | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Entities library contains predefined model's that are purposed for a variety of modelling requirements such as folder/file mapping, table/pagination modelling, and entity identifier mapping.  |
 | CometX.Repository | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
 | CometX.Service | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
 
