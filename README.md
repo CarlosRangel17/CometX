@@ -43,8 +43,6 @@ PM > Install-Package CometX -Version 1.6.2
 | CometX.Repository | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Repository library houses the ORM-related functions<br/>and utilities that allow CometX to meet a variety of data<br/>access requirements. This library connects to the underlying<br/>ADO.NET data provider using Connection Strings.  |
 | CometX.Service | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Service library is a CometX factory that implements upon <br/>the CometX project: `CometX.Repository`, `CometX.Attributes`,<br/>and `CometX.Entities`. This factory translates your LINQ into<br/>raw SQL queries to perform a variety of data accessing<br/>requirements. |
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## 4. Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/CarlosRangel17/CometX/blob/master/Good-CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
