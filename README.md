@@ -41,7 +41,7 @@ PM > Install-Package CometX -Version 1.6.2
 | CometX.Attributes | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Attributes library can be broken into two categories: <br/>1-Property, & 2-Relational. Both are used to add metadata<br/>to class properties which the CometX Project can utilize<br/>for a range of query & property operations. |
 | CometX.Entities | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Entities library contains predefined model's that are<br/>purposed for a variety of modelling requirements such as<br/>entity identifier mapping, folder/file mapping, and<br/>table/pagination modelling.  |
 | CometX.Repository | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Repository library houses the ORM-related functions<br/>and utilities that allow CometX to meet a variety of data<br/>access requirements. This library connects to the underlying<br/>ADO.NET data provider using Connection Strings.  |
-| CometX.Service | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | Words, words, words |
+| CometX.Service | ![image](https://user-images.githubusercontent.com/11052295/71768303-9ec9e080-2eda-11ea-81f2-4b7eecb43294.png) | The Service library is a CometX factory that implements upon the CometX project libraries: `CometX.Repository`, `CometX.Attributes`, and `CometX.Entities`. |
 
 End with an example of getting some data out of the system or using it for a little demo
 
