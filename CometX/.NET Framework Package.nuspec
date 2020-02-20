@@ -2,12 +2,12 @@
 <package >
   <metadata>
     <id>CometX</id>
-    <version>1.6.2</version>
+    <version>1.6.3</version>
     <authors>Carlos Rangel</authors>
     <owners>Carlos Rangel</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>CometX Attributes, Entities, Service and Repo .dlls</description>
-    <releaseNotes>Updating CometX Service, and Repository layers. Reworked MarkActive logic.</releaseNotes>
+    <releaseNotes>Updating CometX Repository layers. Cleaned up QueryUtil builder variables.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>CometX Microsoft.ApplicationBlocks.Data ApplicationBlocks</tags>
     <dependencies>
