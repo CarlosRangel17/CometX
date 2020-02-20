@@ -119,6 +119,8 @@ namespace CometX.Repository.Utilities
         public string Translate(Expression expression)
         {
             this.sb = new StringBuilder();
+            this._contains = string.Empty;
+            this._equal = string.Empty;
             this.Visit(expression);
             return CompileQueryClause();
         }
